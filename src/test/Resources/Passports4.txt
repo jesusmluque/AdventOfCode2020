@@ -1,0 +1,32 @@
+eyr:2038 byr:1951
+hgt:171cm iyr:2011
+
+hcl:#c0946f byr:1933 eyr:2025 pid:517067213 hgt:173cm
+ecl:hzl
+iyr:2018
+
+pid:5253256652 byr:2009 hgt:152cm iyr:1989 eyr:1968 hcl:64cb63 ecl:hzl
+
+iyr:2013
+pid:862607211 eyr:2020
+hgt:174cm
+byr:1990
+ecl:blu hcl:#888785
+
+ecl:grn byr:1955
+pid:608098408 eyr:2027 iyr:2020 hcl:#b6652a cid:264
+hgt:181cm
+
+byr:1998 ecl:hzl eyr:2021
+hcl:#866857 hgt:189cm iyr:2030
+pid:013735467
+
+pid:075417314 hcl:#b6652a byr:1957
+iyr:2011
+hgt:154cm
+eyr:2025
+ecl:amb
+
+iyr:1993 hgt:74cm eyr:1960
+byr:2029
+hcl:293244 ecl:#3cb5e5 pid:4861232363
