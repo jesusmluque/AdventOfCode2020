@@ -17,11 +17,7 @@ object BinaryBoarding {
     row * 8 + col
   }
 
-  def getMaxID(codes: List[String]) = {
-    val orderedCodes = codes.map(getID).sorted
-
-    orderedCodes.max
-  }
+  def getMaxID(codes: List[String]) = codes.map(getID).max
 
   def findTheSeat(codes: List[String]) = {
     val orderedCodes = codes.map(getID).sorted
