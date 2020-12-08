@@ -2,11 +2,11 @@ import scala.annotation.tailrec
 
 object HandheldHalting {
 
-  def parseRawInstructions(rawInstructions: Vector[String]) = rawInstructions.map { raw =>
+  private def parseRawInstructions(rawInstructions: Vector[String]) = rawInstructions.map { raw =>
       (raw.split(" ")(0), raw.split(" ")(1).toInt)
     }
 
-  def executeWith(instructions: Vector[(String, Int)]) = {
+  private def executeWith(instructions: Vector[(String, Int)]) = {
     @tailrec
     def execute(instructions: Vector[(String, Int)], pointer: Int, acc: Int, instructionUsed: List[Int]):(Int, List[Int], Boolean) = {
       if (pointer >= instructions.size)
@@ -22,9 +22,7 @@ object HandheldHalting {
     execute(instructions, 0, 0, List())
   }
 
-  def executeProgram(rawInstructions: Vector[String]) = executeWith(parseRawInstructions(rawInstructions))._1
-
-  def modifyProgram(instructions: Vector[(String, Int)]) = {
+  private def modifyProgram(instructions: Vector[(String, Int)]) = {
     val (acc1, instructionList, isLoop) = executeWith(instructions)
     instructionList.map { indexIns =>
       instructions(indexIns) match {
@@ -34,6 +32,8 @@ object HandheldHalting {
       }
     }.find(!_._3).getOrElse((acc1, instructionList, isLoop))
   }
+
+  def executeProgram(rawInstructions: Vector[String]) = executeWith(parseRawInstructions(rawInstructions))._1
 
   def executeProgram2(rawInstructions: Vector[String]) =
     modifyProgram(parseRawInstructions(rawInstructions))._1
