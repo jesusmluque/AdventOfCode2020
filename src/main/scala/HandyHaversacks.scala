@@ -10,7 +10,6 @@ object HandyHaversacks {
       rules + (rule(0) -> rule(1))
     }
     findTotalContainers(mapOfRules, "shiny gold bag", Set()).size
-
   }
 
   def getTotalBagsForShinyGoldBug(bagsRules: List[String]):Int = {
@@ -23,7 +22,6 @@ object HandyHaversacks {
           acc + num + num * findTotalInnerBugs(rules, elem.splitAt(2)._2.split(" bag")(0))
         }
       }
-
     }
     val mapOfRules = bagsRules.foldLeft(Map[String, List[String]]()) { (rules, rawRule) =>
       val rule = rawRule.split(" contain ")
