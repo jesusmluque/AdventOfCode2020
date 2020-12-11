@@ -27,6 +27,16 @@ object AdapterArray {
     extra.product
   }
 
+  def calculateCombinations2(adapters: List[Int]) = {
+    val v = Vector(1L,1L,2L) ++ Vector.fill(adapters.max - 2)(0L)
+    Range(3,adapters.max + 1).foldLeft(v) { (acc, n) =>
+      if (adapters.contains(n))
+        acc.updated(n,acc(n-3) + acc(n-2) + acc(n-1))
+      else
+        acc
+    }.last
+  }
+
   def traverseArray(adapters: List[Int], acc: (List[Int],Int,Int,Int)): (List[Int],Int,Int,Int) = {
     if (adapters.nonEmpty) {
       val next = adapters.head
