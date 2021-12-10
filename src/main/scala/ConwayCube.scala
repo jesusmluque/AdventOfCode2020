@@ -1,6 +1,15 @@
-object ConwayCube {
+import scala.io.BufferedSource
 
-  type CubeSpace = Vector[Vector[Vector[((Int,Int,Int), String)]]]
+object ConwayCube {
+  type Coordinates = (Int,Int,Int)
+  type Cube[A] = Vector[Vector[Vector[(Coordinates, A)]]]
+  case class CubeSpace[A](private val space: List[Coordinates]) {
+    def getNeighbors(p: Coordinates) = List((p._1 + 1, p._2 + 1, p._3 + 1))
+  }
+
+  def getTotalCubesAfter(i: Int, source: BufferedSource) = ???
+
+
 
   def executeSixCycles(cubes: Vector[String]) = {
     val cycle = 1
