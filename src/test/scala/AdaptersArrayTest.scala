@@ -17,11 +17,11 @@ class AdaptersArrayTest extends FlatSpec{
   }
 
   "The total number of distinct ways you can arrange the adapters to connect the charging outlet to your device for the AdaptersExercise1.txt " should " be " in {
-    assert(AdapterArray.calculateCombinations(Source.fromResource("AdaptersExercise1.txt").getLines.toList.map(_.toInt)) == 8)
+    assert(AdapterArray.calculateCombinations2(Source.fromResource("AdaptersExercise1.txt").getLines.toList.map(_.toInt)) == 8)
   }
 
   "The total number of distinct ways you can arrange the adapters to connect the charging outlet to your device for the AdaptersExercise2.txt " should " be " in {
-    assert(AdapterArray.calculateCombinations(Source.fromResource("AdaptersExercise2.txt").getLines.toList.map(_.toInt)) == 19208)
+    assert(AdapterArray.calculateCombinations2(Source.fromResource("AdaptersExercise2.txt").getLines.toList.map(_.toInt)) == 19208)
   }
 
   "The total number of distinct ways you can arrange the adapters to connect the charging outlet to your device for the Adapters.txt " should " be " in {
