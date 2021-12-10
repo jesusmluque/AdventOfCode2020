@@ -21,6 +21,6 @@ class HandyHaversacksTest extends FlatSpec{
   }
 
   "The number of bags into the gold shiny bug in the BagsRules file " should "be 11261" in {
-    assert(HandyHaversacks.getTotalBagsForShinyGoldBug(Source.fromResource("BagsRules.txt").getLines().toList) == 126)
+    assert(HandyHaversacks.getTotalBagsForShinyGoldBug(Source.fromResource("BagsRules.txt").getLines().toList) == 11261)
   }
 }
